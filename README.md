@@ -1,5 +1,4 @@
-# basicAnimation
-CS120 Basic Animation Project
+# CS120 Basic Animation Project
 
 Will contain the following components:
 
