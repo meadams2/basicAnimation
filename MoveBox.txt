@@ -22,6 +22,8 @@ Action:
 		Set frame rate to be 30 frames per second
 	Event-handling:
 		Look for quit event (ie clicking the X)
-		If quit event, keepGoing is false
+			If quit event, keepGoing is false
+		Modify box value by adding 5 to box position on x-axis
+		If the box position is greater than the screen width, return to beginning (ie, 0)
 	Refresh display:
 		Blit the screen and flip for double buffering
