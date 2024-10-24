@@ -1,0 +1,72 @@
+Marianne Adams
+CS120
+Basic Animation
+
+Will use image of my cat as the moving entity. Wednesday will be exploring a fall scene.
+
+Initialize & import.
+
+Display:
+	Screen display 640 x 480 pixels
+	Set caption to "Wednesday's Adventure"
+	
+Entities:
+	Background is the size of the screen display
+	Convert background
+	Load image for background.
+
+	Load image for Wednesday
+	Convert image to transparent
+	Scale image to 100 x 100
+
+	Set variables for Wednesday (ie, Wednesday's position on display)
+	Wednesday's x position is 0
+	Wednesday's y position is 200
+	
+Action:
+	Assign:
+		Initialize clock
+		keepGoing gets True
+	Loop:
+		While keepGoing:
+	Time:
+		Set clock to 30 frames per second
+	Events:
+		Look for quit event. If quit event, keepGoing gets false
+		If key is pressed DOWN:
+			If "SPACE" pressed down:
+				dx gets random integer (-10,10)
+				dy gets random integer (-10,10)
+		If key UP
+			If m is up:
+				if mode is bounce:
+					mode gets wrap
+				else:
+					mode gets bounce
+		Wednesday's x position gets += dx
+		Wednesday's y position gets += dy
+		
+		if mode is bounce
+			Check rectangle of Wednesday image
+			left of rectangle is wednesday_x
+			top of rectangle is wednesday_y
+			if right is greater than screen width:
+				dx*=-1
+			if left is <0:
+				dx*=-1
+			if bottom is greater than screen length:
+				dy*=-1
+			if top is <0:
+				dy*=-1
+		if mode is wrap
+			wednesday_x += 5
+			if wednesday_x > screen width:
+				wednesday_x = 0
+					
+		Refresh screen:
+			screen.blit(background(0,0))
+			screen.blit(Wednesday, (wednesday_x, wednesday_y))
+			Flip display
+		
+
+	

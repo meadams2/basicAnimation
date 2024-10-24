@@ -1,0 +1,27 @@
+Marianne Adams
+CS120
+Basic Animation 
+
+The goal of this project is to explore the IDEA-ALTER framework and to create a basic game with wrapping and movement. 
+
+Import and Initialize--import pygame and initialize pygame
+Display Configuration:
+	We want to set the display to be 640 x 480 pixels
+	Set display caption to "Basic Animation-Move a Box"
+Entities:
+	Background will be the size of the display
+	Convert the background & fill with desired color (or image)
+	Make a green 25 x 25 box
+Action:
+	Assigning values to variables:
+		Add pygame clock
+		keepGoing is true
+	Loop:
+		Set up while keepGoing loop
+	Timer:
+		Set frame rate to be 30 frames per second
+	Event-handling:
+		Look for quit event (ie clicking the X)
+		If quit event, keepGoing is false
+	Refresh display:
+		Blit the screen and flip for double buffering
